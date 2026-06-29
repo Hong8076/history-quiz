@@ -1,51 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<title>历史大通关</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史大通关</title>
 
-<style>
-body{
-    font-family: Arial;
-    background:#f5f5f5;
-    text-align:center;
-    padding-top:80px;
-}
-
-h1{
-    color:#2c3e50;
-}
-
-.score{
-    position:fixed;
-    right:20px;
-    top:20px;
-    font-size:22px;
-    background:#4CAF50;
-    color:white;
-    padding:10px 20px;
-    border-radius:10px;
-}
-
-button{
-    padding:15px 30px;
-    font-size:20px;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="score">
-0 / 5000
-</div>
+<header>
+    <h1>🏛 历史大通关</h1>
 
-<h1>🏛 历史大通关</h1>
+    <div id="score">
+        得分：
+        <span id="scoreValue">0</span>/5000
+    </div>
+</header>
 
-<p>欢迎来到历史知识挑战！</p>
+<main>
 
-<button>开始答题</button>
+    <div id="quizBox">
+
+        <h2 id="question">
+            正在加载题目……
+        </h2>
+
+        <div id="answers"></div>
+
+        <button id="submitBtn">
+            提交答案
+        </button>
+
+    </div>
+
+</main>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
